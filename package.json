@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stem4good/Google_Search-bot.git"
+    "url": "git+https://github.com/stem4good/smartdev-bot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stem4good/Google_Search-bot/issues"
+    "url": "https://github.com/stem4good/smartdev-bot.git/issues"
   },
-  "homepage": "https://github.com/stem4good/Google_Search-bot#readme",
+  "homepage": "https://github.com/stem4good/smartdev-bot.git#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
