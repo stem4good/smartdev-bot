@@ -2,6 +2,7 @@ const handleMessage = require('../app/index')
 const router = require('express').Router()
 const request = require('request')
 router.get('/', function (req, res) {
+    console.log("webhook")
     if (req.query['hub.verify_token'] === process.env.verifyToken) {
         res.send(req.query['hub.challenge'])
     } else {
@@ -19,6 +20,7 @@ router.post('/', function (req, res) {
         if (event.message && event.message.text) {
 
             let msg = event.message.text;
+            console.log(msg)
             handleMessage(msg, sender, sendMessageData);
 
         }

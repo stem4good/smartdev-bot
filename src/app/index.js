@@ -1,4 +1,4 @@
-const sendArchivedPage = require('./sendArchivedPage')
+import { sendArchivedPage } from './sendArchivedPage'
 const isUrl = require('is-url')
 const fs = require('fs')
 
@@ -20,6 +20,6 @@ module.exports = (message, senderID, sendMessageData) => {
             )
         })
     }else{
-        console.log("this is not a url")
+        console.log("this is not a url.")
     }
 }

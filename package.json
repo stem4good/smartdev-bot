@@ -1,10 +1,11 @@
 {
-  "name": "Google_Search-bot",
+  "name": "smartdev-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "expose": "start cmd /k lt --port 8000 --subdomain smartdev-bot && set NODE_ENV=expose &&nodemon app"
+    "expose": "start cmd /k lt --port 8000 --subdomain smartdev-bot && set NODE_ENV=expose &&nodemon app",
+    "start": "nodemon --exec babel-node src/app.js -i \"**/data/**\""
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,12 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "extract-domain": "^2.0.4",
     "fs": "0.0.1-security",
     "get-title-at-url": "^1.1.6",
     "human-readable-time": "^0.3.0",
     "is-url": "^1.2.4",
+    "localtunnel": "^1.9.1",
     "path": "^0.12.7",
     "request": "^2.88.0",
     "rimraf": "^2.6.3",
@@ -33,7 +36,11 @@
     "zip-folder": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
     "node-hot-loader": "^1.12.3",
+    "nodemon": "^1.18.9",
     "webpack": "^4.29.0"
   }
 }
